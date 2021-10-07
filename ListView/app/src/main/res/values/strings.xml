@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ListView</string>
+
+    //membuat data array golongan
+    <string-array name="golongan">
+        <item>A (ARTOTAIR)</item>
+        <item>B (BALERION)</item>
+        <item>C (CELLORI)</item>
+        <item>D (DEADLONT)</item>
+        <item>Internasional (TERNARY)</item>
+        <item>A BWS (ASROBAT)</item>
+        <item>B BWS (BOTABIN)</item>
+    </string-array>
+
+    //membuat data array mata kuliah
+    <string-array name="matkul">
+        <item>Interaksi Manusia dan Komputer</item>
+        <item>Immerdiate English</item>
+        <item>Workshop Mobile Applications</item>
+        <item>Workshop Sistem Informasi Berbasis Web</item>
+        <item>Workshop Kualitas Perangkat lunak</item>
+        <item>Perencanaan Kualitas Perangkat Lunak</item>
+        <item>Struktur Data</item>
+    </string-array>
+</resources>
