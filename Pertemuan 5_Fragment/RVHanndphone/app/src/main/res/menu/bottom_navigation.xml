@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    //membuat fragment menu apa saja yang ditampilkan pada bottomNavigationView
+    //menu Home
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"/>
+
+    //menu Calls
+    <item
+        android:id="@+id/calls"
+        android:icon="@drawable/ic_baseline_call_24"
+        android:title="Calls"/>
+
+    //menu Status
+    <item
+        android:id="@+id/status"
+        android:icon="@drawable/ic_baseline_history_24"
+        android:title="Status"/>
+
+    //menu Chats
+    <item
+        android:id="@+id/chats"
+        android:icon="@drawable/ic_baseline_chat_24"
+        android:title="Chats"/>
+
+    //menu Acount
+    <item
+        android:id="@+id/acount"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="Acount"/>
+
+</menu>

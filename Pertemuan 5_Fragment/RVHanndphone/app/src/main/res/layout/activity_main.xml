@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    //membuat komponen AutoComplete untuk mencari handphone dengan mudah
+    <AutoCompleteTextView
+        android:id="@+id/handphone"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Pilih Handphone"
+        android:completionThreshold="1"
+        android:completionHint="Cari handphone"
+        android:popupTheme="@color/black"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="10dp">
+    </AutoCompleteTextView>
+
+    //menapilkan image cari
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/cari"/>
+
+    //membuat komponen recyclerView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        tools:ignore="MissingConstraints" />
+
+    //membuat frame layout
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation" />
+
+    //inisialisasi material bottom navigation
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation"/>
+</RelativeLayout>

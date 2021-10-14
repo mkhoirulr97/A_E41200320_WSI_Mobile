@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/mainLayout">
+
+    //membuat komponen cardview
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        //membuat komponen dengan linearlayout untuk memudahkan dalam mengatur desain atau letak
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            //membuat komponen imageview
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/ic_launcher_foreground"
+                tools:ignore="MissingConstraints" />
+
+            //membuat komponen dengan linearlayout untuk memudahkan dalam mengatur desain atau letak
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                //membuat komponen textview nama handphone
+                <TextView
+                    android:id="@+id/HPView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="namaHandphone"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="28dp"
+                    tools:ignore="MissingConstraints" />
+
+                //membuat komponen textview deskripsi handphone
+                <TextView
+                    android:id="@+id/DecView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="deskripsi"
+                    android:textSize="16dp"
+                    tools:layout_editor_absoluteX="137dp"
+                    tools:layout_editor_absoluteY="60dp"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
