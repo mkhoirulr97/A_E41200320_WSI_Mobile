@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,11 +9,69 @@
 
     //menggunakan text view untuk memudahkan dalam mengetahui fragment yang dipilih
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"
-        android:text="Status Fragment" />
+        android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_centerInParent="true"
+            android:text="Status Fragment"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginLeft="100dp"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/editTextTime"
+            android:layout_width="50dp"
+            android:layout_height="30sp"
+            android:ems="10"
+            android:layout_marginLeft="200dp"
+            android:inputType="time" />
+
+        <SearchView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="300dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="62dp"
+                android:layout_height="85dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_baseline_history_24" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10sp"
+                android:text="Status Saya" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone" />
+
+    </LinearLayout>
 </RelativeLayout>
