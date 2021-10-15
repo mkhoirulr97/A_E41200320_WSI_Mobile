@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    image foto dari include android studio
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -14,6 +15,7 @@
         android:layout_marginLeft="140dp"
         android:layout_marginTop="50dp"/>
 
+    textview nama saya
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,6 +27,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"/>
 
+    textview NIM saya
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,6 +37,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"/>
 
+    edit text untuk mengisikan nomor telepon
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,6 +47,7 @@
         android:layout_marginLeft="20dp"
         android:id="@+id/et1" />
 
+    edit text untuk mengisikan URL
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,6 +58,7 @@
         android:layout_marginLeft="20dp"
         android:id="@+id/et2" />
 
+    button untuk mengirim SMS
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
@@ -63,6 +69,7 @@
         android:layout_marginRight="20dp"
         android:onClick="GoTo"/>
 
+    button untuk mencari URL berdasarkan nilai yang sudah dimasukkan
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
@@ -74,6 +81,7 @@
         android:onClick="GoTo"
         android:layout_below="@+id/button1"/>
 
+    button untuk membuka instagram
     <Button
         android:text="INSTAGRAM"
         android:layout_width="match_parent"
@@ -84,6 +92,7 @@
         android:id="@+id/btnig"
         android:onClick="ig"/>
 
+    button untuk membuka whatsapp
     <Button
         android:text="WHATSAPP"
         android:layout_width="match_parent"
@@ -94,6 +103,7 @@
         android:id="@+id/btnwa"
         android:onClick="wa"/>
 
+    button untuk membuka youtube
     <Button
         android:text="YOUTUBE"
         android:layout_width="match_parent"
@@ -104,6 +114,7 @@
         android:id="@+id/btnyt"
         android:onClick="yt"/>
 
+    button untuk membuka telegram
     <Button
         android:text="TELEGRAM"
         android:layout_width="match_parent"
@@ -114,13 +125,13 @@
         android:id="@+id/btntele"
         android:onClick="tele"/>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@+id/btntele">
 
+        button untuk berpindah ke layout lain
         <Button
             android:text="Home"
             android:layout_width="100dp"
@@ -131,6 +142,7 @@
             android:id="@+id/btnhome"
             android:onClick="home"/>
 
+        button untuk berpindah ke layout lain
         <Button
             android:text="About"
             android:layout_width="100dp"
@@ -141,6 +153,7 @@
             android:id="@+id/btninfo"
             android:onClick="tentang"/>
 
+        button untuk berpindah ke layout lain
         <Button
             android:text="Acount"
             android:layout_width="100dp"
