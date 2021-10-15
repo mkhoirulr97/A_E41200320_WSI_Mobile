@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:srcCompat="@tools:sample/avatars"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MUHAMMAD KHOIRUL ROSIKIN"
+        android:layout_below="@+id/imageView"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:id="@+id/nama"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="E41200320"
+        android:layout_below="@+id/nama"
+        android:textSize="18dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nomor Telepon"
+        android:ems="10"
+        android:layout_marginTop="270dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/et1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Alamat URL"
+        android:ems="10"
+        android:layout_below="@+id/et1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/et2" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kirim"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="270dp"
+        android:layout_marginRight="20dp"
+        android:onClick="GoTo"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cari"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="GoTo"
+        android:layout_below="@+id/button1"/>
+
+    <Button
+        android:text="INSTAGRAM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:id="@+id/btnig"
+        android:onClick="ig"/>
+
+    <Button
+        android:text="WHATSAPP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnig"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:id="@+id/btnwa"
+        android:onClick="wa"/>
+
+    <Button
+        android:text="YOUTUBE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnwa"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:id="@+id/btnyt"
+        android:onClick="yt"/>
+
+    <Button
+        android:text="TELEGRAM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnyt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:id="@+id/btntele"
+        android:onClick="tele"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/btntele">
+
+        <Button
+            android:text="Home"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btninfo"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="22dp"
+            android:id="@+id/btnhome"
+            android:onClick="home"/>
+
+        <Button
+            android:text="About"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btntele"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="22dp"
+            android:id="@+id/btninfo"
+            android:onClick="tentang"/>
+
+        <Button
+            android:text="Acount"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btntele"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="22dp"
+            android:id="@+id/btnacount"
+            android:onClick="acount"/>
+    </LinearLayout>
+
+</RelativeLayout>
