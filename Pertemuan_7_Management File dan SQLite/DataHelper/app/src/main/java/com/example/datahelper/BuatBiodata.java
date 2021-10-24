@@ -3,6 +3,7 @@ package com.example.datahelper;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -27,7 +28,9 @@ public class BuatBiodata extends AppCompatActivity {
         ton1 = (Button) findViewById(R.id.button1);
         ton2 = (Button) findViewById(R.id.button2);
 
-        ton1.setOnClickListener((arg0) -> {
+        ton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
                 db.execSQL ("INSERT INTO biodata(no, nama, tgl, jk, alamat) values'" +
                         text1.getText().toString() + "','" +
@@ -38,9 +41,13 @@ public class BuatBiodata extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Berhasil", Toast.LENGTH_LONG).show();
                 MainActivity.ma.RefreshList();
                 finish();
+            }
         });
-        ton2.setOnClickListener((arg0) -> {
-            finish();
+        ton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
         });
     }
 }

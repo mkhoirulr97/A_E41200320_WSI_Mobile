@@ -1,52 +1,55 @@
 package com.example.managementfile_sqlite;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.widget.Toast;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 public class Main2Activity extends AppCompatActivity {
     TextView showText;
 
     @Override
-    protected void onCreate(Bundle saveInstanceState) {
-        super.onCreate(saveInstanceState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         showText = (TextView) findViewById(R.id.getText);
     }
 
-    public void back(View view){
+    public void back(View view) {
         Intent intent = new Intent(Main2Activity.this, MainActivity.class);
         startActivity(intent);
     }
 
-    public void getPublic(View view){
+    public void getPublic(View view) {
         File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
         File myFile = new File(folder, "myData1.txt");
         String text = getdata(myFile);
         if (text != null) {
             showText.setText(text);
         } else {
-            showText.setText("No Data");
+            showText.setText("tidak ada data");
         }
     }
 
-    public void getPrivate(View view){
-        File folder = getExternalFilesDir("khoirul");
+    public void getPrivate(View view) {
+        File folder = getExternalFilesDir("Izul Ganteng");
         File myFile = new File(folder, "myData2.txt");
         String text = getdata(myFile);
-        if (text != null){
+        if (text != null) {
             showText.setText(text);
         } else {
-            showText.setText("No Data");
+            showText.setText("tidak ada data");
         }
     }
 
@@ -56,13 +59,15 @@ public class Main2Activity extends AppCompatActivity {
             fileInputStream = new FileInputStream(myFile);
             int i = -1;
             StringBuffer buffer = new StringBuffer();
+
             while ((i = fileInputStream.read()) != -1) {
                 buffer.append((char) i);
             }
+            return buffer.toString();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            if (fileInputStream != null){
+            if (fileInputStream != null) {
                 try {
                     fileInputStream.close();
                 } catch (IOException e) {

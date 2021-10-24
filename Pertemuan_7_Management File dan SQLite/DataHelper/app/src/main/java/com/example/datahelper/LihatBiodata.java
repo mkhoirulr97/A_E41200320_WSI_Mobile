@@ -3,6 +3,7 @@ package com.example.datahelper;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -36,8 +37,11 @@ public class LihatBiodata extends AppCompatActivity {
             text5.setText(cursor.getString(4).toString());
         }
         ton2 = (Button) findViewById(R.id.button1);
-        ton2.setOnClickListener((arg0) -> {
-            finish();
+        ton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
         });
     }
 }

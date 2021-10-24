@@ -3,6 +3,7 @@ package com.example.datahelper;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -38,20 +39,26 @@ public class UpdateBiodata extends AppCompatActivity {
         ton1 = (Button) findViewById(R.id.button1);
         ton2 = (Button) findViewById(R.id.button2);
 
-        ton1.setOnClickListener((arg0) ->{
-                SQLiteDatabase db = dbHelper.getWritableDatabase();
-                db.execSQL ("UPDATE biodata set nama='" +
-                text2.getText().toString() + "', tgl ='" +
-                text3.getText().toString() + "', jk='" +
-                text4.getText().toString() + "', alamat='" +
-                text5.getText().toString() + "', where no='" +
-                text1.getText().toString() + "'");
+        ton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SQLiteDatabase dbc = dbHelper.getWritableDatabase();
+                dbc.execSQL ("UPDATE biodata set nama='" +
+                        text2.getText().toString() + "', tgl ='" +
+                        text3.getText().toString() + "', jk='" +
+                        text4.getText().toString() + "', alamat='" +
+                        text5.getText().toString() + "', where no='" +
+                        text1.getText().toString() + "'");
                 Toast.makeText(getApplicationContext(), "Berhasil", Toast.LENGTH_LONG).show();
-        MainActivity.ma.RefreshList();
-        finish();
-        });
-        ton2.setOnClickListener((arg0) ->{
+                MainActivity.ma.RefreshList();
                 finish();
+            }
+        });
+        ton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
         });
     }
 }
