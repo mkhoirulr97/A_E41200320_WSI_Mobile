@@ -16,11 +16,12 @@ import android.widget.Button;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
+
     String[] daftar;
     ListView listView1;
     Menu menu;
     protected Cursor cursor;
-    DataHelper dbcenter;
+    DataHelper dbCenter;
     public static MainActivity ma;
 
     @Override
@@ -28,8 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn = (Button) findViewById(R.id.button2);
-
+        Button btn = (Button) findViewById(R.id.btn_buat);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,46 +39,46 @@ public class MainActivity extends AppCompatActivity {
         });
 
         ma = this;
-        dbcenter = new DataHelper(this);
+        dbCenter = new DataHelper(this);
         RefreshList();
     }
 
-    public void  RefreshList(){
-        SQLiteDatabase db = dbcenter.getReadableDatabase();
+    public void RefreshList() {
+        SQLiteDatabase db = dbCenter.getReadableDatabase();
         cursor = db.rawQuery("SELECT * FROM biodata", null);
         daftar = new String[cursor.getCount()];
         cursor.moveToFirst();
-        for (int cc = 0; cc < cursor.getCount(); cc++){
-            cursor.moveToPosition(cc);
-            daftar[cc] = cursor.getString(1).toString();
+        for (int i=0; i<cursor.getCount(); i++) {
+            cursor.moveToPosition(i);
+            daftar[i] = cursor.getString(1).toString();
         }
-        listView1 = (ListView) findViewById(R.id.listView1);
-        listView1.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, daftar));
+        listView1 = findViewById(R.id.list_view1);
+        listView1.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, daftar));
         listView1.setSelected(true);
         listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView arg0, View arg1, int arg2, long arg3) {
-                final String selection = daftar[arg2];
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                final String selection = daftar[i];
                 final CharSequence[] dialogitem = {"Lihat Biodata", "Update Biodata", "Hapus Biodata"};
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle("Pilihan");
                 builder.setItems(dialogitem, new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int item) {
-                        switch (item) {
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        switch (i) {
                             case 0:
-                                Intent i = new Intent(getApplicationContext(), LihatBiodata.class);
-                                i.putExtra("nama", selection);
-                                startActivity(i);
-                                break;
-                            case 1:
-                                Intent in = new Intent(getApplicationContext(), UpdateBiodata.class);
+                                Intent in = new Intent(getApplicationContext(), LihatBiodata.class);
                                 in.putExtra("nama", selection);
                                 startActivity(in);
                                 break;
+                            case 1:
+                                Intent inte = new Intent(getApplicationContext(), UpdateBiodata.class);
+                                inte.putExtra("nama", selection);
+                                startActivity(inte);
+                                break;
                             case 2:
-                                SQLiteDatabase db = dbcenter.getWritableDatabase();
-                                db.execSQL("DELETE FROM biodata WHERE nama = '"+selection+"'");
+                                SQLiteDatabase db = dbCenter.getWritableDatabase();
+                                db.execSQL("DELETE FROM biodata WHERE nama = '" + selection + "'");
                                 RefreshList();
                                 break;
                         }
