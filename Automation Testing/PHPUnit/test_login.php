@@ -15,8 +15,8 @@ class test_login extends TestCase
         $insert = new login();
 
         //memasukkan username dan password sesuai yang ada pada database
-        $username = "si-boss@gmail.com";
-        $password = "123";
+        $username = "";
+        $password = "";
         $hasil = $insert->LoginSystem($username, $password);
         $this->assertTrue($hasil);
     }
