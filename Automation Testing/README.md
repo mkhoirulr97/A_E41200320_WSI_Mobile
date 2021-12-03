@@ -23,7 +23,7 @@ E41200315		YULIANA DEWI
 
 <h3>Kondisi Email Salah</h3>
 <p align="center">
-<img align="center" src=https://user-images.githubusercontent.com/74761484/144641151-fda3a585-53f9-4c7d-978c-773ce4ccff24.PNG" width="800px" height="600px">
+<img align="center" src="https://user-images.githubusercontent.com/74761484/144641151-fda3a585-53f9-4c7d-978c-773ce4ccff24.PNG" width="800px" height="600px">
 </p>
 
 <h3>KondisiPasswordSalah</h3>
