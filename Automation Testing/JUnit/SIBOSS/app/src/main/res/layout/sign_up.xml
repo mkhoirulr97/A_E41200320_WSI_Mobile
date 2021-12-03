@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto"
+            android:text="Register"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative2"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@+id/relative1"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/pacifico"
+            android:text="SI-BOSS"
+            android:textColor="@drawable/gradient_bg"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/tv1"
+            android:fontFamily="@font/italianno"
+            android:gravity="center_vertical"
+            android:text="Express"
+            android:textColor="@drawable/gradient_bg"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative2"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Daftar akun"
+            android:textColor="@color/textHeadline"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv2"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="Silahkan Daftarkan akun anda sekarang"
+            android:textColor="@color/textDescription"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/EtUsernameDaftar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv3"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edittext_bg"
+            android:drawableStart="@drawable/ic_baseline_account_box_24"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/roboto"
+            android:hint="Username"
+            android:inputType="textEmailAddress"
+            android:padding="8dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/EtNamaLengkapDaftar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EtUsernameDaftar"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_bg"
+            android:drawableStart="@drawable/ic_baseline_account_circle_24"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/roboto"
+            android:hint="Full name"
+            android:inputType="text"
+            android:padding="8dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/EtPasswordDaftar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EtNamaLengkapDaftar"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_bg"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawableEnd="@drawable/ic_baseline_visibility_24"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/roboto"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:textSize="16sp" />
+
+<!--        <EditText-->
+<!--            android:id="@+id/EtKonfirmasiSandi"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/EtSandiDaftar"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@drawable/edittext_bg"-->
+<!--            android:drawableStart="@drawable/ic_baseline_lock_24"-->
+<!--            android:drawableEnd="@drawable/ic_baseline_visibility_24"-->
+<!--            android:drawablePadding="16dp"-->
+<!--            android:fontFamily="@font/roboto"-->
+<!--            android:hint="Konfirmasi kata sandi"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:padding="8dp"-->
+<!--            android:textSize="16sp" />-->
+
+
+        <RelativeLayout
+            android:id="@+id/relative5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EtPasswordDaftar"
+            android:layout_marginTop="14dp">
+
+            <Button
+                android:id="@+id/BtnDaftar"
+                android:layout_width="137dp"
+                android:layout_height="41dp"
+                android:layout_marginHorizontal="100dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginRight="150dp"
+                android:background="@drawable/round_btn"
+                android:text="Register"
+                android:textAllCaps="true"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/BtnDaftar"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:text="@string/String_login"
+                android:textColor="@color/textHeadline"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/TvLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv4"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:onClick=""
+                android:text="@string/login_button"
+                android:textColor="@color/textHeadline"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

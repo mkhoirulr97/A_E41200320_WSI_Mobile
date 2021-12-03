@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.rafli.si_boss.beranda">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="172dp"
+        android:orientation="vertical"
+        android:background="@drawable/edittext_bg">
+
+        <ImageView
+            android:id="@+id/FotoProfil"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/round_img"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rafli al fajar"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="siboss@gmail.com"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/BtnBeranda"
+        android:layout_marginTop="8dp"
+        android:layout_width="279dp"
+        android:layout_height="40dp"
+        android:text="Beranda"
+        android:fontFamily="@font/opensanssemibold"
+        android:textSize="16sp"
+        android:drawableStart="@drawable/ic_baseline_home_24"
+        android:textAllCaps="false"
+        android:background="@drawable/edittext_bg"/>
+    <Button
+        android:id="@+id/BtnPemesanan"
+        android:layout_marginTop="8dp"
+        android:layout_width="279dp"
+        android:layout_height="40dp"
+        android:text="Pemesanan"
+        android:fontFamily="@font/opensanssemibold"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:background="@drawable/edittext_bg"/>
+    <Button
+        android:id="@+id/BtnPembayaran"
+        android:layout_marginTop="8dp"
+        android:layout_width="279dp"
+        android:layout_height="40dp"
+        android:text="Pembayaran"
+        android:fontFamily="@font/opensanssemibold"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:background="@drawable/edittext_bg"/>
+    <Button
+        android:id="@+id/BtnAkunSaya"
+        android:layout_marginTop="8dp"
+        android:layout_width="279dp"
+        android:layout_height="40dp"
+        android:text="akun saya"
+        android:fontFamily="@font/opensanssemibold"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:background="@drawable/edittext_bg"/>
+    <Button
+        android:id="@+id/BtnKeluar"
+        android:layout_marginTop="8dp"
+        android:layout_width="279dp"
+        android:layout_height="40dp"
+        android:text="Keluar dari akun"
+        android:fontFamily="@font/opensanssemibold"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:background="@drawable/edittext_bg"/>
+</LinearLayout>
